@@ -1,4 +1,5 @@
 import React from 'react';
+import './assets/css/footer.css';
 
 // Primary ReactJs Function
 function Footer() {

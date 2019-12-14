@@ -2,6 +2,8 @@ import React from 'react';
 import PageTitle from '../PageTitle';
 import PortfolioMenu from './PortfolioMenu';
 
+import '../assets/css/portfolio/portfolio-menu.css';
+
 // Primary ReactJs Function
 function Portfolio(props) {
         // Enclosing tag in the return necesssary when adjacent elements used

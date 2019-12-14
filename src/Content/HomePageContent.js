@@ -1,5 +1,6 @@
 import React from 'react';
 import PageTitle from '../PageTitle';
+import {Spring} from 'react-spring/renderprops';
 
 // Primary ReactJs Function
 function HomePageContent(props) {

@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 function PorfolioMenu(props) {
 
     return (
+        <div className="portfolio-content-wrapper">
         <nav className="portfolio-menu">
             <ul>
                 <li>
@@ -45,6 +46,7 @@ function PorfolioMenu(props) {
                 </li>
             </ul>
         </nav>
+        </div>
     );
 
 }
