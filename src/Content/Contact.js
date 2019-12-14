@@ -5,9 +5,9 @@ import PageTitle from '../PageTitle';
 function Contact(props) {
         // Enclosing tag in the return necesssary when adjacent elements used
     return (
-        <div className="page-content">
+        <div className="page-content contact contain">
             <PageTitle name="Contact" />
-            <div>Contact Page Content</div>
+            <div>Contact me for more information about my work and how it can intersect your needs. I love learning about new project ideas. </div>
         </div>
     );
 

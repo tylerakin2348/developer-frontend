@@ -6,7 +6,11 @@ import PortfolioMenu from './PortfolioMenu';
 function Portfolio(props) {
         // Enclosing tag in the return necesssary when adjacent elements used
     return (
-        <div className="page-content">
+        <div className="page-content portfolio">
+            <div className="contain">
+                <PageTitle name="Work. Done." />
+                Learn more about projects I have worked on during my career.
+            </div>
             <PortfolioMenu />
         </div>
     );

@@ -2,6 +2,10 @@
   text-align: center;
 }
 
+.contain {
+    margin: 0 auto;
+    max-width: 44rem;
+}
 
 .App-header {
     background-color: #282c34;
@@ -46,10 +50,10 @@
     height: 100%;
     justify-content: center;
     position: relative;
+    overflow: hidden;
 }
 
 .Main-Menu-navigation li:first-child {
-    width: 10%;
     transition: all .35s linear;
 }
 
@@ -72,6 +76,26 @@
     top: 0;
     padding-top: 30vh;
     z-index: 1;
+    text-align: left;
+}
+
+.page-content.technology,
+.page-content.about,
+.page-content.contact,
+.page-content.portfolio {
+    position: relative;
+    height: auto;
+    padding-top: 0;
+}
+
+.page-content.technology + .footer,
+.page-content.about + .footer,
+.page-content.contact + .footer,
+.page-content.portfolio + .footer  {
+    position: relative;
+    height: auto;
+    padding-top: 0;
+    /* margin-top: 1.5rem; */
 }
 
 .Main-Menu-navigation li img {
@@ -177,7 +201,7 @@ bottom: 0;
     align-items: center;
     width: 100%;
     justify-content: space-between;
-    height: 70vh;
+    height: 5em;
     position: relative;
     transition: width .35s ease-in-out;
 }
@@ -245,6 +269,10 @@ bottom: 0;
     color: #ffffff;
 }
 
+.Main-Menu-navigation .first-menu-item {
+    width: 0%;
+}
+
 .active-menu-state li:first-child {
     width: 30%;
     transition: all .35s linear;
@@ -265,7 +293,6 @@ bottom: 0;
     position: relative;
     transition: all .35s linear;
     width: 10%;
-
 }
 
 .active-menu-state li.first-menu-item.active {

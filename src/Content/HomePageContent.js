@@ -5,7 +5,7 @@ import PageTitle from '../PageTitle';
 function HomePageContent(props) {
     // Enclosing tag in the return necesssary when adjacent elements used
     return (
-        <div className="page-content">
+        <div className="page-content homepage">
             <PageTitle name="Tyler Akin" />
             <div>Homepage Content</div>
         </div>
