@@ -1,0 +1,98 @@
+.Main-Menu-navigation {
+  height: 100%;
+  width: 100%; }
+
+.Main-Menu-navigation ul {
+  list-style: none;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: 0;
+  padding: 0; }
+
+.Main-Menu-navigation li {
+  display: flex;
+  width: 33.33%;
+  align-items: center;
+  height: 100%;
+  justify-content: center;
+  position: relative;
+  overflow: hidden; }
+
+.Main-Menu-navigation li:first-child {
+  transition: all .35s linear; }
+
+.Main-Menu-navigation li:after {
+  background-color: rgba(79, 87, 84, 0.2);
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%; }
+
+.Main-Menu-navigation li img {
+  object-fit: cover;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  height: 100%;
+  width: 100%;
+  opacity: .6; }
+
+.Main-Menu-navigation li a {
+  color: #ffffff;
+  position: relative;
+  z-index: 1; }
+
+.Main-Menu-navigation li a:hover {
+  text-decoration: none; }
+
+.active-menu-state li {
+  display: flex;
+  overflow: hidden;
+  width: 33.33%;
+  align-items: center;
+  height: 100%;
+  justify-content: center;
+  position: relative;
+  transition: all .35s linear; }
+
+.Main-Menu-navigation .first-menu-item {
+  width: 0%; }
+
+.active-menu-state li:first-child {
+  width: 30%;
+  transition: all .35s linear; }
+
+.active-menu-state li:after {
+  opacity: .2; }
+
+.active-menu-state li.active:after {
+  opacity: .5; }
+
+.active-menu-state li.active {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  justify-content: center;
+  position: relative;
+  transition: all .35s linear;
+  width: 10%; }
+
+.active-menu-state li.first-menu-item.active {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  justify-content: center;
+  position: relative;
+  transition: all .35s linear;
+  width: 0%; }
+
+.Main-Menu-navigation li:nth-child(odd) {
+  background-color: #000000; }
+
+.Main-Menu-navigation li:nth-child(even) {
+  background-color: #af6969; }

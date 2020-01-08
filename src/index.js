@@ -1,12 +1,20 @@
+// First, import ReactJs files. Two necessary.
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import {BrowserRouter} from 'react-router-dom';
+
+// Import css file
+import './assets/css/index.css';
+
+// Import the react instance
 import App from './App';
-import * as serviceWorker from './serviceWorker';
+import App2 from './App2';
 
-ReactDOM.render(<App />, document.getElementById('root'));
-
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+// Attach the app (and render it) in index.html
+ReactDOM.render((
+    <BrowserRouter>
+        <App />
+        <App2 />
+    </BrowserRouter>
+),
+document.getElementById('root'));

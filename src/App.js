@@ -1,26 +1,32 @@
+// Also requires react import, but no react dom
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
 
+// Import components used below
+    // Names logo here
+import './assets/css/app.css';
+
+// Import Header Components
+import Header from './Header';
+import PageContent from './PageContent';
+import Footer from './Footer';
+
+// Primary ReactJs Function
 function App() {
-  return (
+  return ( // React functions are included in "return"
+
+  // Write HTML as normal
+  // Include ReactJs components
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+      <Header />
+
+      <PageContent />
+
+      <Footer />
+
     </div>
   );
 }
 
+// Export app function to use it in index.js
 export default App;
