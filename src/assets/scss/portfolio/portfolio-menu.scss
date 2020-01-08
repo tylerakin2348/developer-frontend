@@ -2,7 +2,6 @@
 .portfolio-menu {
     height: 100%;
 top: 0;
-/* position: absolute; */
 width: 100%;
 left: 0;
 display: block;
@@ -36,21 +35,22 @@ bottom: 0;
 }
 
 .portfolio-menu ul li:hover .portfolio-image {
-    width: 55%;
+    width: 100%;
     transition: width .35s ease-in-out;
 }
 
 .portfolio-menu .portfolio-image {
-    width: 50%;
+    width: 90%;
     position: relative;
     overflow: hidden;
     height: 100%;
     text-align: left;
     margin: 0;
+    height: 6rem;
+    transition: width .35s ease-in-out;
 }
 
 .portfolio-menu ul li img {
-    /* display: none; */
     object-fit: cover;
     position: absolute;
         left: 50%;
@@ -58,7 +58,6 @@ bottom: 0;
         transform: translate(-50%, -50%);
     height: 100%;
     width: 100%;
-    opacity: .6;
 }
 
 .portfolio-menu ul li:nth-child(even) {
@@ -78,5 +77,5 @@ bottom: 0;
     text-decoration: none;
     text-align: left;
     padding: 1em;
-    width: 50%;
+    width: 70%;
 }

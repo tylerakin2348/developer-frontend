@@ -12,16 +12,24 @@
     justify-content: space-around;
     margin: 0;
     padding: 0;
+    width: 100%;
+    flex-direction: column;
+    @media (min-width: 768px) {
+      flex-direction: row;
+    }
 }
 
 .Main-Menu-navigation li {
     display: flex;
-    width: 33.33%;
     align-items: center;
+    width: 100%;
     height: 100%;
     justify-content: center;
     position: relative;
     overflow: hidden;
+    @media (min-width: 768px) {
+        width: 33.33%;
+    }
 }
 
 .Main-Menu-navigation li:first-child {
@@ -60,25 +68,40 @@
     text-decoration: none;
 }
 
+.active-menu-state ul {
+    // flex-direction: row;
+    // flex-wrap: wrap;
+}
+
 .active-menu-state li {
     display: flex;
     overflow: hidden;
-    width: 33.33%;
     align-items: center;
-    height: 100%;
+    height: 50%;
     justify-content: center;
     position: relative;
     transition: all .35s linear;
+    @media (min-width: 768px) {
+        height: 100%;
+        width: 33.33%;
+    }
 }
 
 
 .Main-Menu-navigation .first-menu-item {
-    width: 0%;
+    height: 0;
+    @media (min-width: 768px) {
+        height: auto;
+        width: 0%;
+    }
+
 }
 
 .active-menu-state li:first-child {
-    width: 30%;
     transition: all .35s linear;
+    @media (min-width: 768px) {
+        width: 30%;
+    }
 }
 
 .active-menu-state li:after {
@@ -91,21 +114,30 @@
 .active-menu-state li.active {
     display: flex;
     align-items: center;
-    height: 100%;
+    height: 50%;
+    width: 100%;
     justify-content: center;
     position: relative;
     transition: all .35s linear;
-    width: 10%;
+    @media (min-width: 768px) {
+        height: 100%;
+        width: 10%;
+    }
 }
 
-.active-menu-state li.first-menu-item.active {
+.active-menu-state li.first-menu-item {
     display: flex;
     align-items: center;
-    height: 100%;
+    height: 50%;
     justify-content: center;
     position: relative;
     transition: all .35s linear;
-    width: 0%;
+    @media (min-width: 768px) {
+        height: 100%;
+    }
+    &.active {
+        height: 0%;
+    }
 }
 
 .Main-Menu-navigation li:nth-child(odd) {

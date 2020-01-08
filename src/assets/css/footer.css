@@ -2,10 +2,8 @@
   background-color: rgba(79, 87, 84, 0.64);
   color: #ffffff;
   width: 100%;
-  position: absolute;
   top: 0;
-  height: 5em;
-  padding-top: 100vh;
+  height: 5rem;
   display: flex;
   align-items: center;
   justify-content: center; }

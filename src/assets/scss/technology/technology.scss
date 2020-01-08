@@ -3,6 +3,8 @@
     display: block;
     height: 50%;
     width: 50%;
+    margin: 0 auto;
+    text-align: center;
 }
 
 .technology-sector--inner {
@@ -18,7 +20,6 @@
 .technology-navigation {
     height: 100%;
 top: 0;
-position: absolute;
 width: 100%;
 left: 0;
 display: block;
@@ -47,7 +48,6 @@ bottom: 0;
     width: 50%;
     align-items: center;
     justify-content: center;
-    margin-top: 30vh;
     height: 68vh;
 }
 
