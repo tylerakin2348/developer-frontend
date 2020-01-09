@@ -19,11 +19,15 @@ function AboutPageContent(props) {
 
                 <PageTitle name="A developer at heart" />
 
-                <div>Writing something that works captures my desire for creation. Crafting functionality that presents content for users taps my desire to create and evoke an effect.</div>
+                <div>Writing something that works captures my desire for creation. Crafting functionality that presents content for users taps my desire to create and evoke an effect.
+
+                I have worked both within Agencies and as a Freelance developer.
+                </div>
+
 
                 <h2>About This Site</h2>
 
-                <div>tylerakin.com is the development porfolio site for Tyler Akin, a developer focused largely on Front-End Development—in the Louisville, Kentucky region. This site is designed as a single-page application using the ReactJs framework. </div>
+                <div>tylerakin.com is the development porfolio site for Tyler Akin, a developer focused largely on Front-End Development—in the Louisville, Kentucky region. This site is designed as a single-page application using the ReactJs framework.</div>
             </motion.div>
         </div>
     );

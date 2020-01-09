@@ -49,6 +49,16 @@ function Technology(props) {
                             <div>After Effects</div>
                         </div>
                     </div>
+
+                    <div className="technology-sector">
+                        <h2>Accessibility</h2>
+                        <div className="technology-sector--inner">
+                            <div>WCAG 2.0</div>
+                            <div>WCAG 2.1</div>
+                            <div>ADA</div>
+                            <div>Section 508</div>
+                        </div>
+                    </div>
                 </div>
             </motion.div>
 
