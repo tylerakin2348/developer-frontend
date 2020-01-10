@@ -3,10 +3,8 @@
     background-color: rgba(79, 87, 84, 0.64);
     color: #ffffff;
     width: 100%;
-    // position: absolute;
     top: 0;
     height: 5rem;
-    // padding-top: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -14,4 +12,5 @@
 
 .footer .footer-inner {
     padding: 1em;
+    text-align: center;
 }

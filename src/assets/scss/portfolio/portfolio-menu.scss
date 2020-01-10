@@ -78,4 +78,32 @@ bottom: 0;
     text-align: left;
     padding: 1em;
     width: 70%;
+    &:after {
+        display: none;
+    }
+}
+
+
+.portfolio-menu {
+    height: 100%;
+top: 0;
+width: 100%;
+left: 0;
+display: block;
+right: 0;
+bottom: 0;
+
+.work-type {
+    color: #ffffff;
+    font-weight: 700;
+    text-transform: uppercase;
+    position: relative;
+    z-index: 1;
+    padding: 0 1em;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: auto;
+    background-color: rgba(0,0,0,.54);
+}
 }

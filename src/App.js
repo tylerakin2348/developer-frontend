@@ -2,8 +2,6 @@
 import React from 'react';
 
 // Import components used below
-    // Names logo here
-import './assets/css/app.css';
 
 // Import Header Components
 import Header from './Header';

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion, staggerChildren } from "framer-motion"
+import '../assets/css/portfolio/portfolio-menu.css';
 
 // Primary ReactJs Function
 function PorfolioMenu(props) {

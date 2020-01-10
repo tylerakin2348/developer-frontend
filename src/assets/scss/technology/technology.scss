@@ -19,12 +19,16 @@
 
 .technology-navigation {
     height: 100%;
-top: 0;
-width: 100%;
-left: 0;
-display: block;
-right: 0;
-bottom: 0;
+    top: 0;
+    width: 100%;
+    left: 0;
+    display: block;
+    right: 0;
+    bottom: 0;
+}
+
+.actions {
+    height: 100%;
 }
 
 .technology-navigation ul {
@@ -48,9 +52,10 @@ bottom: 0;
     width: 50%;
     align-items: center;
     justify-content: center;
-    height: 68vh;
 }
 
 .technology-navigation ul li a {
+    font-size: 1.25em;
+    text-transform: uppercase;
     color: #ffffff;
 }

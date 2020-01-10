@@ -22,6 +22,9 @@
   right: 0;
   bottom: 0; }
 
+.actions {
+  height: 100%; }
+
 .technology-navigation ul {
   list-style: none;
   display: flex;
@@ -41,8 +44,9 @@
   align-items: center;
   width: 50%;
   align-items: center;
-  justify-content: center;
-  height: 68vh; }
+  justify-content: center; }
 
 .technology-navigation ul li a {
+  font-size: 1.25em;
+  text-transform: uppercase;
   color: #ffffff; }

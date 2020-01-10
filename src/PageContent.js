@@ -10,6 +10,8 @@ import WorkContent from './Content/WorkContent';
 import Portfolio from './Content/Portfolio';
 import Technology from './Content/Technology';
 
+import './assets/css/fonts.css';
+import './assets/css/general.css';
 import './assets/css/page-content.css';
 
 // Primary ReactJs Function

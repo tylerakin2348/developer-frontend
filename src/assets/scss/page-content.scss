@@ -12,10 +12,9 @@ body {
 }
 
 .page-content {
-    min-height: calc(70vh);
+    height: 85vh;
     background-color: #ffffff;
     left: 0;
-    width: 100%;
     top: 0;
     z-index: 1;
     text-align: left;
@@ -29,29 +28,11 @@ body {
     height: 70px;
 }
 
-.page-content.technology,
-.page-content.about,
-.page-content.contact,
-.page-content.portfolio {
-    position: relative;
-    height: auto;
-    padding-top: 0;
-}
-
-.page-content.technology + .footer,
-.page-content.about + .footer,
-.page-content.contact + .footer,
-.page-content.portfolio + .footer  {
-    position: relative;
-    padding-top: 0;
-}
-
 
 .page-content.technology {
     list-style: none;
         display: flex;
         justify-content: space-between;
-        height: 100%;
         width: 100%;
         padding: 0;
         margin: 0;
