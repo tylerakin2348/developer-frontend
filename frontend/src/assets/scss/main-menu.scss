@@ -1,3 +1,11 @@
+.App-header {
+    a {
+        color: #ffffff;
+        &:after {
+            background-color: #ffffff;
+        }
+    }
+}
 .main-header-content {
     width: 100%;
     display: flex;

@@ -6,7 +6,12 @@
   height: 5rem;
   display: flex;
   align-items: center;
-  justify-content: center; }
+  justify-content: center;
+  position: relative;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center; }
 
 .footer .footer-inner {
   padding: 1em;

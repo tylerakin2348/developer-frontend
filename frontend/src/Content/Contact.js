@@ -15,6 +15,9 @@ function Contact(props) {
 
                 <PageTitle name="Contact" />
                 <div>Contact me for more information about my work and how it can intersect your needs. I love learning about new project ideas. </div>
+
+                <p><a href="mailto:tylerakinmwc@gmail.com">tylerakinmwc@gmail.com</a></p>
+                <p><a href="tel:+15026459250">(502) 645-9250</a></p>
             </motion.div>
         </div>
     );

@@ -34,14 +34,14 @@ function PorfolioMenu(props) {
                             <span className="work-type">Freelance</span>
                             <img src="../audubon-sanctuary.png" alt="audubon baptist church sanctuary" />
                         </div>
-                        <Link to="/work/portfolio/audubon-baptist" className="main-menu__item">Audubon Baptist Church</Link>
+                        <Link to="/work/portfolio/audubon-baptist-church" className="main-menu__item">Audubon Baptist Church</Link>
                     </motion.li>
                     <motion.li variants={item}>
                         <div className="portfolio-image">
                             <span className="work-type">Agency</span>
                             <img src="../ker-horse.png" alt="ker horse photo" />
                         </div>
-                        <Link to="/work/portfolio/ker" className="main-menu__item">Kentucky Equine Research</Link>
+                        <Link to="/work/portfolio/kentucky-equine-research" className="main-menu__item">Kentucky Equine Research</Link>
                     </motion.li>
                     <motion.li variants={item}>
                         <div className="portfolio-image">
@@ -63,13 +63,6 @@ function PorfolioMenu(props) {
                             <img src="../zeon-chemicals-road.png" alt="zeon chemicals road photo" />
                         </div>
                         <Link to="/work/portfolio/zeon-chemicals" className="main-menu__item">Zeon Chemicals</Link>
-                    </motion.li>
-                    <motion.li variants={item}>
-                        <div className="portfolio-image">
-                            <span className="work-type">Freelance</span>
-                            <img src="../oils.jpg" alt="oils photo" />
-                        </div>
-                        <Link to="/work/portfolio/health-connection" className="main-menu__item">A Health Connection</Link>
                     </motion.li>
                 </motion.ul>
             </nav>

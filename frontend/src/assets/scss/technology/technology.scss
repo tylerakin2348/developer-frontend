@@ -18,13 +18,14 @@
 }
 
 .technology-navigation {
-    height: 100%;
+    height: 85vh;
     top: 0;
     width: 100%;
     left: 0;
     display: block;
     right: 0;
     bottom: 0;
+
 }
 
 .actions {
@@ -58,4 +59,8 @@
     font-size: 1.25em;
     text-transform: uppercase;
     color: #ffffff;
+
+    &:after {
+        background-color: #ffffff;
+    }
 }
