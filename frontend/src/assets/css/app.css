@@ -1,0 +1,27 @@
+.contain {
+  margin: 0 auto;
+  max-width: 44rem; }
+
+.App-header {
+  overflow: hidden;
+  background-color: #282c34;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  z-index: 2;
+  position: relative;
+  transition: height .35s linear; }
+
+.App-header.site-entered {
+  height: 15vh;
+  transition: height .35s linear; }
+  .App-header.site-entered .Main-Menu-navigation {
+    transition: height .35s linear; }
+
+.technology-sector {
+  display: block;
+  height: 50%;
+  width: 50%; }

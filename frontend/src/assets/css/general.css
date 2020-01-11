@@ -1,0 +1,33 @@
+.assistive {
+  margin-left: -9999px;
+  opacity: 0;
+  position: absolute; }
+
+body {
+  font-family: 'Hind Siliguri', sans-serif;
+  margin: 0;
+  font-size: 1em; }
+
+.Page-Title {
+  text-transform: capitalize; }
+
+a {
+  position: relative;
+  text-decoration: none; }
+  a:after {
+    background: #ffffff;
+    content: '';
+    width: 100%;
+    height: 2px;
+    transition: all .35s ease-in-out;
+    position: absolute;
+    left: 0;
+    bottom: -.25em; }
+  a:hover:after {
+    opacity: 1;
+    bottom: -.1em;
+    transition: all .35s ease-in-out; }
+
+.contain {
+  margin: 0 auto;
+  max-width: 44rem; }
