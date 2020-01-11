@@ -1,7 +1,7 @@
 .App-header {
     a {
         color: #ffffff;
-        &:after {
+        &:not(.go-to-start-page):after {
             background-color: #ffffff;
         }
     }

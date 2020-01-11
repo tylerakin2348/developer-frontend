@@ -1,6 +1,6 @@
 .App-header a {
   color: #ffffff; }
-  .App-header a:after {
+  .App-header a:not(.go-to-start-page):after {
     background-color: #ffffff; }
 
 .main-header-content {
