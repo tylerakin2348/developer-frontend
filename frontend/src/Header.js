@@ -33,47 +33,49 @@ import MainMenu from './MainMenu';
   }
 
 // Primary ReactJs Function
-function Header() {
-  return ( // React functions are included in "return"
-  // Write HTML as normal
-      <header className="App-header at-start-page">
-        <div className="main-header-content">
-            <div className="site-logo">
-                Tyler Akin
-            </div>
-            <Link to="/" className="go-to-start-page" onClick={home_page_link}>
-                Back Home
-                <span className="assistive">
-                    Go to the homepage
-                </span>
-            </Link>
+class Header extends React.Component {
+    render() {
+        return ( // React functions are included in "return"
+        // Write HTML as normal
+            <header className="App-header at-start-page">
+              <div className="main-header-content">
+                  <div className="site-logo">
+                      Tyler Akin
+                  </div>
+                  <Link to="/" className="go-to-start-page" onClick={home_page_link}>
+                      Back Home
+                      <span className="assistive">
+                          Go to the homepage
+                      </span>
+                  </Link>
 
-            <nav>
-                <ul>
-                    <li>
-                        <Link to="/" className="main-menu__item" onClick={home_page_link}>
-                            Home
-                            <span className="assistive">
-                                Click to expand menu.
-                            </span>
-                        </Link>
+                  <nav>
+                      <ul>
+                          <li>
+                              <Link to="/" className="main-menu__item" onClick={home_page_link}>
+                                  Home
+                                  <span className="assistive">
+                                      Click to expand menu.
+                                  </span>
+                              </Link>
 
-                    </li>
-                    <li>
-                        <Link to="/about-tyler" className="main-menu__item" onClick={site_entered}>About Tyler</Link>
-                    </li>
-                    <li>
-                        <Link to="/work" className="main-menu__item" onClick={site_entered}>My Work</Link>
-                    </li>
-                    <li>
-                        <Link to="/contact" className="main-menu__item" onClick={site_entered}>Contact Me</Link>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-        <MainMenu />
-      </header>
-  );
+                          </li>
+                          <li>
+                              <Link to="/about-tyler" className="main-menu__item" onClick={site_entered}>About Tyler</Link>
+                          </li>
+                          <li>
+                              <Link to="/work" className="main-menu__item" onClick={site_entered}>My Work</Link>
+                          </li>
+                          <li>
+                              <Link to="/contact" className="main-menu__item" onClick={site_entered}>Contact Me</Link>
+                          </li>
+                      </ul>
+                  </nav>
+              </div>
+              <MainMenu />
+            </header>
+        );
+    }
 }
 
 // Export app function to use it in index.js

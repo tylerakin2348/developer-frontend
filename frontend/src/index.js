@@ -6,14 +6,13 @@ import {BrowserRouter} from 'react-router-dom';
 // Import css file
 
 // Import the react instance
-import App from './App';
-import App2 from './App2';
+import DevelopmentPortfolio from './DevelopmentPortfolio';
+import LearnReactApp from './LearnReactApp';
 
 // Attach the app (and render it) in index.html
 ReactDOM.render((
     <BrowserRouter>
-        <App />
-        <App2 />
+        <LearnReactApp />
     </BrowserRouter>
 ),
 document.getElementById('root'));
