@@ -1,13 +1,15 @@
 .footer {
-  background-color: rgba(79, 87, 84, 0.64);
+  background-color: #4f5754;
   color: #ffffff;
   width: 100%;
   top: 0;
   height: 5rem;
   display: flex;
   align-items: center;
-  justify-content: center; }
+  justify-content: center;
+}
 
 .footer .footer-inner {
   padding: 1em;
-  text-align: center; }
+  text-align: center;
+}

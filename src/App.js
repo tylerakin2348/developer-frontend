@@ -1,27 +1,26 @@
 // Also requires react import, but no react dom
-import React from 'react';
+import React from "react";
 
 // Import components used below
 
 // Import Header Components
-import Header from './Header';
-import PageContent from './PageContent';
-import Footer from './Footer';
+import Header from "./Header";
+import PageContent from "./PageContent";
+import Footer from "./Footer";
 
 // Primary ReactJs Function
 function App() {
-  return ( // React functions are included in "return"
+  return (
+    // React functions are included in "return"
 
-  // Write HTML as normal
-  // Include ReactJs components
+    // Write HTML as normal
+    // Include ReactJs components
     <div className="App">
-
       <Header />
 
       <PageContent />
 
       <Footer />
-
     </div>
   );
 }

@@ -1,5 +1,5 @@
 .footer {
-  background-color: rgba(79, 87, 84, 0.64);
+  background-color: rgba(79, 87, 84, 1);
   color: #ffffff;
   width: 100%;
   top: 0;
@@ -11,8 +11,10 @@
   left: 0;
   bottom: 0;
   width: 100%;
-  text-align: center; }
+  text-align: center;
+}
 
 .footer .footer-inner {
   padding: 1em;
-  text-align: center; }
+  text-align: center;
+}

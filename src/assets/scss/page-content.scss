@@ -1,69 +1,68 @@
 body {
-    height: 100vh;
+  height: 100vh;
 }
 .page-content-animation-wrapper {
-    background-color: #ffffff;
-    position: relative;
-    left: 0;
-    width: 100%;
-    top: 0;
-    z-index: 1;
-    text-align: left;
+  background-color: #ffffff;
+  position: relative;
+  left: 0;
+  width: 100%;
+  top: 0;
+  z-index: 1;
+  text-align: left;
 }
 
 .page-content {
-    height: 85vh;
-    background-color: #ffffff;
-    left: 0;
-    top: 0;
-    z-index: 1;
-    text-align: left;
-    &.contain,
-    & .contain {
-        padding: 1em;
-    }
+  height: 85vh;
+  background-color: #ffffff;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  text-align: left;
+  &.contain,
+  & .contain {
+    padding: 1em;
+  }
 }
 
 .footer {
-    height: 70px;
+  height: 70px;
 }
 
-
 .page-content.technology {
-    list-style: none;
-        display: flex;
-        justify-content: space-between;
-        width: 100%;
-        padding: 0;
-        margin: 0;
-        width: 100vw;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  width: 100vw;
 }
 
 .page-content.technology > div {
-    border: 0.1em solid white;
-        height: 100%;
-        display: flex;
-        width: 50%;
-        align-items: center;
-        justify-content: flex-start;
-        flex-wrap: wrap;
-        width: 100vw;
+  border: 0.1em solid white;
+  height: 100%;
+  display: flex;
+  width: 50%;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  width: 100vw;
 }
 
 .page-content.portfolio > .portfolio-content-wrapper {
-    border: 0.1em solid white;
-        height: 100%;
-        display: flex;
-        width: 50%;
-        align-items: center;
-        justify-content: flex-start;
-        flex-wrap: wrap;
-        width: 100vw;
+  border: 0.1em solid white;
+  height: 100%;
+  display: flex;
+  width: 50%;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  width: 100vw;
 }
 
 .page-content.portfolio > .contain {
-    border: 0.1em solid white;
-        height: 100%;
-        width: 50%;
-        width: 100vw;
+  border: 0.1em solid white;
+  height: 100%;
+  width: 50%;
+  width: 100vw;
 }

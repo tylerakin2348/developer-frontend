@@ -27,7 +27,7 @@ function MainMenu(props) {
     <nav className="Main-Menu-navigation">
       <ul>
         <li>
-          <img rel="preload" src="../aboutphoto.jpg" alt="about photo" />
+          <img src="../aboutphoto.jpg" alt="about photo" />
           <Link
             to="/about-tyler"
             className="main-menu__item"
@@ -37,13 +37,13 @@ function MainMenu(props) {
           </Link>
         </li>
         <li>
-          <img rel="preload" src="../computer.jpg" alt="computer photo" />
+          <img src="../computer.jpg" alt="computer photo" />
           <Link to="/work" className="main-menu__item" onClick={site_entered}>
             My Work
           </Link>
         </li>
         <li>
-          <img rel="preload" src="../coffee.jpg" alt="coffee photo" />
+          <img src="../coffee.jpg" alt="coffee photo" />
           <Link
             to="/contact"
             className="main-menu__item"

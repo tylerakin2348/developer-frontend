@@ -5,7 +5,8 @@
   left: 0;
   display: block;
   right: 0;
-  bottom: 0; }
+  bottom: 0;
+}
 
 .portfolio-menu ul {
   list-style: none;
@@ -17,7 +18,8 @@
   width: 100%;
   padding: 0;
   margin: 0;
-  width: 100vw; }
+  width: 100vw;
+}
 
 .portfolio-menu ul li {
   height: 100%;
@@ -28,11 +30,13 @@
   justify-content: space-between;
   height: 100%;
   position: relative;
-  transition: width .35s ease-in-out; }
+  transition: width 0.35s ease-in-out;
+}
 
 .portfolio-menu ul li:hover .portfolio-image {
   width: 100%;
-  transition: width .35s ease-in-out; }
+  transition: width 0.35s ease-in-out;
+}
 
 .portfolio-menu .portfolio-image {
   width: 90%;
@@ -42,7 +46,8 @@
   text-align: left;
   margin: 0;
   height: 6rem;
-  transition: width .35s ease-in-out; }
+  transition: width 0.35s ease-in-out;
+}
 
 .portfolio-menu ul li img {
   object-fit: cover;
@@ -51,15 +56,18 @@
   top: 50%;
   transform: translate(-50%, -50%);
   height: 100%;
-  width: 100%; }
+  width: 100%;
+}
 
 .portfolio-menu ul li:nth-child(even) {
   background-color: #333333;
-  border-top: .35em solid #ffffff; }
+  border-top: 0.35em solid #ffffff;
+}
 
 .portfolio-menu ul li:nth-child(odd) {
   background-color: #333333;
-  border-top: .35em solid #ffffff; }
+  border-top: 0.35em solid #ffffff;
+}
 
 .portfolio-menu ul li a {
   color: #ffffff;
@@ -68,9 +76,11 @@
   text-decoration: none;
   text-align: left;
   padding: 1em;
-  width: 70%; }
-  .portfolio-menu ul li a:after {
-    display: none; }
+  width: 70%;
+}
+.portfolio-menu ul li a:after {
+  display: none;
+}
 
 .portfolio-menu {
   height: 100%;
@@ -79,16 +89,18 @@
   left: 0;
   display: block;
   right: 0;
-  bottom: 0; }
-  .portfolio-menu .work-type {
-    color: #ffffff;
-    font-weight: 700;
-    text-transform: uppercase;
-    position: relative;
-    z-index: 1;
-    padding: 0 1em;
-    display: flex;
-    align-items: center;
-    height: 100%;
-    width: auto;
-    background-color: rgba(0, 0, 0, 0.54); }
+  bottom: 0;
+}
+.portfolio-menu .work-type {
+  color: #ffffff;
+  font-weight: 700;
+  text-transform: uppercase;
+  position: relative;
+  z-index: 1;
+  padding: 0 1em;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  width: auto;
+  background-color: rgba(0, 0, 0, 0.54);
+}
