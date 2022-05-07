@@ -9,8 +9,13 @@ function Footer() {
     // Write HTML as normal
     <footer className="footer">
       <div className="footer-inner">
-        Portfolio site for Tyler Akin. Based in Louisville, Kentucky. Built
-        using ReactJS.
+        Built in Louisville, Kentucky.
+        <br></br>© {new Date().getFullYear()} Tyler Akin. All Rights Reserved.
+        <br></br>a{" "}
+        <a className="footer-link" href="https://tylerakin.com">
+          tylerakin.com
+        </a>{" "}
+        site.
       </div>
     </footer>
   );

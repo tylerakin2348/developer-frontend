@@ -7,9 +7,15 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 }
 
 .footer .footer-inner {
   padding: 1em;
   text-align: center;
+}
+
+.footer-link {
+  color: white;
+  text-decoration: none;
 }
