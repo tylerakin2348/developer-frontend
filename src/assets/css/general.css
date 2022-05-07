@@ -1,3 +1,13 @@
+body {
+  min-height: 100vh;
+  /* mobile viewport bug fix */
+  min-height: -webkit-fill-available;
+}
+
+html {
+  height: -webkit-fill-available;
+}
+
 .assistive {
   margin-left: -9999px;
   opacity: 0;
