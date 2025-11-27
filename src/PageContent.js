@@ -1,14 +1,4 @@
-// Also requires react import, but no react dom
-import React from "react";
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link,
-  useLocation,
-} from "react-router-dom";
-import { useTransition, animated, config } from "react-spring";
-import { motion } from "framer-motion";
+import { Navigate, Route, Routes } from "react-router-dom";
 import HomePageContent from "./Content/HomePageContent";
 import AboutPageContent from "./Content/AboutPageContent";
 import Contact from "./Content/Contact";
@@ -20,22 +10,20 @@ import "./assets/css/fonts.css";
 import "./assets/css/general.css";
 import "./assets/css/page-content.css";
 
-// Primary ReactJs Function
 function PageContent() {
-  const location = useLocation();
-
   return (
     <main>
-      <Switch location={location}>
-        <Route exact path="/about-tyler" render={() => <AboutPageContent />} />
-        <Route exact path="/contact" render={() => <Contact />} />
-        <Route exact path="/work" render={() => <WorkContent />} />
-        <Route exact path="/work/portfolio" render={() => <Portfolio />} />
-        <Route exact path="/work/technology" render={() => <Technology />} />
-      </Switch>
+      <Routes>
+        <Route path="/" element={<HomePageContent />} />
+        <Route path="/about-tyler" element={<AboutPageContent />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/work" element={<WorkContent />} />
+        <Route path="/work/portfolio" element={<Portfolio />} />
+        <Route path="/work/technology" element={<Technology />} />
+        <Route path="*" element={<Navigate to="/" replace />} />
+      </Routes>
     </main>
   );
 }
 
-// Export app function to use it in index.js
 export default PageContent;

@@ -1,82 +1,104 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { motion, staggerChildren } from "framer-motion"
-import '../assets/css/portfolio/portfolio-menu.css';
+import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
+import "../assets/css/portfolio/portfolio-menu.css";
 
-// Primary ReactJs Function
-function PorfolioMenu(props) {
-    const container = {
-        hidden: { opacity: 0 },
-        show: {
-            opacity: 1,
-            transition: {
-                staggerChildren: .75,
-                velocity: 2
-            }
-        }
-    }
+const PORTFOLIO_ITEMS = [
+  {
+    slug: "audubon-baptist",
+    name: "Audubon Baptist Church",
+    workType: "Freelance",
+    image: "audubon-sanctuary.png",
+    alt: "Audubon Baptist Church sanctuary",
+  },
+  {
+    slug: "ker",
+    name: "Kentucky Equine Research",
+    workType: "Agency",
+    image: "ker-horse.png",
+    alt: "Kentucky Equine Research immersive imagery",
+  },
+  {
+    slug: "legacy-food-and-feeds",
+    name: "Legacy Food and Feeds",
+    workType: "Freelance",
+    image: "wheat-field.png",
+    alt: "Midwestern wheat field at sunset",
+  },
+  {
+    slug: "kao-collins",
+    name: "Kao Collins Inc",
+    workType: "Agency",
+    image: "kao-ink.png",
+    alt: "Kao Collins ink bottles",
+  },
+  {
+    slug: "zeon-chemicals",
+    name: "Zeon Chemicals",
+    workType: "Agency",
+    image: "zeon-chemicals-road.png",
+    alt: "Zeon Chemicals facility",
+  },
+  {
+    slug: "health-connection",
+    name: "A Health Connection",
+    workType: "Freelance",
+    image: "oils.jpg",
+    alt: "Essential oils on a tabletop",
+  },
+];
 
-    const item = {
-        hidden: { opacity: 0, transform:'translate(0%,-100%)' },
-        show: { opacity: 1,transform:'translate(0%,0%)' }
-    }
+const container = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.75,
+      velocity: 2,
+    },
+  },
+};
 
-    return (
-        <div className="portfolio-content-wrapper">
-            <nav className="portfolio-menu">
-                <motion.ul
-                    className="actions"
-                    variants={container}
-                    initial="hidden"
-                    animate="show">
-                    <motion.li variants={item}>
-                        <div className="portfolio-image">
-                            <span className="work-type">Freelance</span>
-                            <img src="../audubon-sanctuary.png" alt="audubon baptist church sanctuary" />
-                        </div>
-                        <Link to="/work/portfolio/audubon-baptist" className="main-menu__item">Audubon Baptist Church</Link>
-                    </motion.li>
-                    <motion.li variants={item}>
-                        <div className="portfolio-image">
-                            <span className="work-type">Agency</span>
-                            <img src="../ker-horse.png" alt="ker horse photo" />
-                        </div>
-                        <Link to="/work/portfolio/ker" className="main-menu__item">Kentucky Equine Research</Link>
-                    </motion.li>
-                    <motion.li variants={item}>
-                        <div className="portfolio-image">
-                            <span className="work-type">Freelance</span>
-                            <img src="../wheat-field.png" alt="wheat field photo" />
-                        </div>
-                        <Link to="/work/portfolio/legacy-food-and-feeds" className="main-menu__item">Legacy Food and Feeds</Link>
-                    </motion.li>
-                    <motion.li variants={item}>
-                        <div className="portfolio-image">
-                            <span className="work-type">Agency</span>
-                            <img src="../kao-ink.png" alt="kao ink photo" />
-                        </div>
-                        <Link to="/work/portfolio/kao-collins" className="main-menu__item">Kao Collins Inc</Link>
-                    </motion.li>
-                    <motion.li variants={item}>
-                        <div className="portfolio-image">
-                            <span className="work-type">Agency</span>
-                            <img src="../zeon-chemicals-road.png" alt="zeon chemicals road photo" />
-                        </div>
-                        <Link to="/work/portfolio/zeon-chemicals" className="main-menu__item">Zeon Chemicals</Link>
-                    </motion.li>
-                    <motion.li variants={item}>
-                        <div className="portfolio-image">
-                            <span className="work-type">Freelance</span>
-                            <img src="../oils.jpg" alt="oils photo" />
-                        </div>
-                        <Link to="/work/portfolio/health-connection" className="main-menu__item">A Health Connection</Link>
-                    </motion.li>
-                </motion.ul>
-            </nav>
-        </div>
-    );
+const item = {
+  hidden: { opacity: 0, transform: "translate(0%,-100%)" },
+  show: { opacity: 1, transform: "translate(0%,0%)" },
+};
 
+function getImageUrl(fileName) {
+  return `${process.env.PUBLIC_URL}/${fileName}`;
 }
 
-// Export app function to use it in index.js
-export default PorfolioMenu;
+function PortfolioMenu() {
+  return (
+    <div className="portfolio-content-wrapper">
+      <nav className="portfolio-menu">
+        <motion.ul
+          className="actions"
+          variants={container}
+          initial="hidden"
+          animate="show"
+        >
+          {PORTFOLIO_ITEMS.map((entry) => (
+            <motion.li key={entry.slug} variants={item}>
+              <div className="portfolio-image">
+                <span className="work-type">{entry.workType}</span>
+                <img
+                  src={getImageUrl(entry.image)}
+                  alt={entry.alt}
+                  loading="lazy"
+                />
+              </div>
+              <Link
+                to={`/work/portfolio/${entry.slug}`}
+                className="main-menu__item"
+              >
+                {entry.name}
+              </Link>
+            </motion.li>
+          ))}
+        </motion.ul>
+      </nav>
+    </div>
+  );
+}
+
+export default PortfolioMenu;

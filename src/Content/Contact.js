@@ -1,4 +1,3 @@
-import React from "react";
 import PageTitle from "../PageTitle";
 import { motion } from "framer-motion";
 

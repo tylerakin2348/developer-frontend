@@ -1,4 +1,3 @@
-import React from "react";
 import PageTitle from "../PageTitle";
 import PortfolioMenu from "./PortfolioMenu";
 import { motion } from "framer-motion";
@@ -24,7 +23,7 @@ function Portfolio(props) {
           Learn more about projects I have worked on during my career.
           <p>Coming soon...</p>
         </div>
-        {/* <PortfolioMenu /> */}
+        <PortfolioMenu />
       </motion.div>
     </div>
   );

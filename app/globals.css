@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply box-border;
+  }
+
+  html {
+    @apply h-full scroll-smooth bg-slate-950;
+  }
+
+  body {
+    @apply min-h-screen bg-slate-950 text-slate-100 antialiased;
+  }
+
+  main {
+    @apply flex-1;
+  }
+
+  a {
+    @apply text-inherit no-underline;
+  }
+}
+

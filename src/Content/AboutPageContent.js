@@ -1,6 +1,4 @@
-import React from "react";
 import PageTitle from "../PageTitle";
-import { Spring } from "react-spring/renderprops";
 import { motion } from "framer-motion";
 
 // Primary ReactJs Function

@@ -1,53 +1,58 @@
-import React from "react";
 import { Link } from "react-router-dom";
 import "./assets/css/main-menu.css";
 
-function MainMenu(props) {
-  function site_entered(e) {
-    let testElements = document.querySelectorAll(".main-menu__item");
-    let set_active_menu_state = document.querySelector(".App-header");
-    let current_element = e.target;
-    let current_element_parent = current_element.parentNode;
-    set_active_menu_state.classList.remove("at-start-page");
-    set_active_menu_state.classList.add("site-entered");
+const ABOUT_PHOTO = `${process.env.PUBLIC_URL}/aboutphoto.jpg`;
+const WORK_PHOTO = `${process.env.PUBLIC_URL}/computer.jpg`;
+const CONTACT_PHOTO = `${process.env.PUBLIC_URL}/coffee.jpg`;
 
-    for (
-      let testElement = 0;
-      testElement < testElements.length;
-      testElement++
-    ) {
-      testElements[testElement].classList.remove("current-page");
+function MainMenu() {
+  function setActiveMenuState(target) {
+    const header = document.querySelector(".App-header");
+    const menuItems = document.querySelectorAll(".main-menu__item");
+
+    header?.classList.remove("at-start-page");
+    header?.classList.add("site-entered");
+
+    menuItems.forEach((item) => item.classList.remove("current-page"));
+    target.classList.add("current-page");
+  }
+
+  function handleSiteEntered(event) {
+    const target = event.currentTarget;
+    if (target) {
+      setActiveMenuState(target);
     }
-    current_element.classList.add("current-page");
   }
 
   return (
-    // React functions are included in "return"
-    // Write HTML as normal
     <nav className="Main-Menu-navigation">
       <ul>
         <li>
-          <img src="../aboutphoto.jpg" alt="about photo" />
+          <img src={ABOUT_PHOTO} alt="About Tyler" />
           <Link
             to="/about-tyler"
             className="main-menu__item"
-            onClick={site_entered}
+            onClick={handleSiteEntered}
           >
             About Tyler
           </Link>
         </li>
         <li>
-          <img src="../computer.jpg" alt="computer photo" />
-          <Link to="/work" className="main-menu__item" onClick={site_entered}>
+          <img src={WORK_PHOTO} alt="My work" />
+          <Link
+            to="/work"
+            className="main-menu__item"
+            onClick={handleSiteEntered}
+          >
             My Work
           </Link>
         </li>
         <li>
-          <img src="../coffee.jpg" alt="coffee photo" />
+          <img src={CONTACT_PHOTO} alt="Contact" />
           <Link
             to="/contact"
             className="main-menu__item"
-            onClick={site_entered}
+            onClick={handleSiteEntered}
           >
             Contact Me
           </Link>
@@ -57,5 +62,4 @@ function MainMenu(props) {
   );
 }
 
-// Export app function to use it in index.js
 export default MainMenu;

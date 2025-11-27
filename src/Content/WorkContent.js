@@ -1,4 +1,3 @@
-import React from 'react';
 import WorkByTechnology from './WorkByTechnology';
 
 // Primary ReactJs Function
