@@ -1,3 +1,4 @@
+import NewsletterForm from '../components/NewsletterForm';
 import PageTitle from '../components/PageTitle';
 
 const TECHNOLOGY_SECTIONS = [
@@ -45,7 +46,7 @@ function HomePage() {
           </p> */}
         </div>
         <a
-          href="#about"
+          href="#technology"
           className="absolute bottom-10 inline-flex h-14 w-14 items-center justify-center rounded-full border border-white/40 bg-white/10 text-white transition-all hover:translate-y-1 hover:bg-white/20"
           aria-label="Scroll to About section"
         >
@@ -61,7 +62,7 @@ function HomePage() {
         </a>
       </section>
 
-      <section id="about" className="bg-white text-slate-900">
+      {/* <section id="about" className="bg-white text-slate-900">
         <div className="mx-auto flex max-w-4xl flex-col gap-6 px-6 py-20 lg:px-8 lg:py-24">
           <PageTitle name="A developer at heart" />
           <p className="text-lg leading-relaxed text-slate-700">
@@ -76,7 +77,7 @@ function HomePage() {
             communication, calm collaboration, and a genuine care for their product vision.
           </p>
         </div>
-      </section>
+      </section> */}
 
       <section id="technology" className="bg-slate-100 text-slate-900">
         <div className="mx-auto flex max-w-6xl flex-col gap-10 px-6 py-20 lg:px-8 lg:py-24">
@@ -139,6 +140,17 @@ function HomePage() {
               </dd>
             </div>
           </dl>
+          <div className="mt-4 border-t border-slate-200 pt-8">
+            <h2 className="text-lg font-semibold uppercase tracking-[0.2em] text-brand-800">
+              Newsletter
+            </h2>
+            <p className="mt-3 text-base leading-relaxed text-slate-700">
+              Occasional notes on web engineering, accessibility, and product work. No spam.
+            </p>
+            <div className="mt-4 max-w-xl">
+              <NewsletterForm />
+            </div>
+          </div>
         </div>
       </section>
     </>

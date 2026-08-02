@@ -1,0 +1,12 @@
+# Copy to terraform.tfvars (do not commit secrets).
+aws_region     = "us-east-1"
+project_name   = "developer-frontend"
+ses_from_email = "Tyler <hello@yourdomain.com>"
+cron_secret    = "replace-with-long-random-string"
+
+github_repository   = "https://github.com/OWNER/developer-frontend"
+github_access_token = "ghp_xxx"
+amplify_branch_name = "main"
+
+# Tighten after you know your admin IP; Amplify without VPC often needs 0.0.0.0/0.
+# allowed_cidr_blocks = ["203.0.113.10/32"]

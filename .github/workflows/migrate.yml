@@ -1,0 +1,46 @@
+name: Run DB Migrations
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'db/migrations/**'
+      - '.github/workflows/migrate.yml'
+
+permissions:
+  id-token: write
+  contents: read
+
+jobs:
+  migrate:
+    name: Apply SQL migrations
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ${{ secrets.AWS_REGION }}
+
+      - name: Install psql
+        run: sudo apt-get update && sudo apt-get install -y postgresql-client
+
+      - name: Fetch DATABASE_URL and migrate
+        run: |
+          set -euo pipefail
+          SECRET_ARN="${{ secrets.DATABASE_URL_SECRET_ARN }}"
+          DATABASE_URL=$(aws secretsmanager get-secret-value \
+            --secret-id "$SECRET_ARN" \
+            --query SecretString \
+            --output text)
+          export DATABASE_URL
+          for file in db/migrations/*.sql; do
+            echo "Applying $file"
+            psql "$DATABASE_URL" -v ON_ERROR_STOP=1 -f "$file"
+          done
